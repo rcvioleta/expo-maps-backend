@@ -8,7 +8,6 @@ const PORT = process.env.PORT || 3000;
 
 app.get("/news-entries", async (req, res, next) => {
   const browser = await puppeteer.launch({
-    executablePath: "/usr/bin/brave-browser",
     headless: true,
   });
   const page = await browser.newPage();
